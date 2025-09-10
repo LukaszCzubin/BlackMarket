@@ -12,157 +12,29 @@
     <nav>
         <ul class="nav-list">
             <div class="left">
-             <li class="imagdf"><img src="image-removebg-preview.png" id="img" alt="" width="25%"></li>   
+                <li class="imagdf"><img src="image-removebg-preview.png" id="img" alt="" width="25%"></li>
             </div>
-            
+
             <div class="right">
-               <a href="">
-                <li>Strona Główna</li>
-            </a>
-            <a href="">
-                <li>O nas</li>
-            </a>
-            <a href="">
-                <li>Koszyk</li>
-            </a>   
+
+                <a href="">
+                    <li>O nas</li>
+                </a>
+                <a href="">
+                    <img src="icons8-cart-64 (1).png" alt="" max-width="20%" height="35px">
+                </a>
             </div>
-          
+
         </ul>
     </nav>
     <section class="banner">
         <img src="baner.jpg" alt="" class="baner" id="image">
     </section>
+    <h1 class="title">Najlepsze produkty</h1>
     <section class="products">
 
-        <ul class="product-list">
-            <li class="product">
-                <div class="product-img">
-                    <img src="komp.png" alt="">
-                </div>
-                <div class="product-title">
-                    <h2>Boost ramu</h2>
-                </div>
-                <div class="product-price">
-                    <p>$837.99</p>
-                </div>
-                <div class="product-add">
-                    <button id="button">
-                        <p>Dodaj</p>
-                    </button>
-                </div>
-            </li>
-            <li class="product">
-                <div class="product-img">
-                    <img src="komp.png" alt="">
-                </div>
-                <div class="product-title">
-                    <h2>Booster FPS'ów</h2>
-                </div>
-                <div class="product-price">
-                    <p>$7354.99</p>
-                </div>
-                <div class="product-add">
-                    <button id="button">
-                        <p>Dodaj</p>
-                    </button>
-                </div>
-            </li>
-            <li class="product">
-                <div class="product-img">
-                    <img src="komp.png" alt="">
-                </div>
-                <div class="product-title">
-                    <h2>SKILL</h2>
-                </div>
-                <div class="product-price">
-                    <p>$93465.99</p>
-                </div>
-                <div class="product-add">
-                    <button id="button">
-                        <p>Dodaj</p>
-                    </button>
-                </div>
-            </li>
-            <li class="product">
-                <div class="product-img">
-                    <img src="komp.png" alt="">
-                </div>
-                <div class="product-title">
-                    <h2>Lepszy aim</h2>
-                </div>
-                <div class="product-price">
-                    <p>$2984.99</p>
-                </div>
-                <div class="product-add">
-                    <button id="button">
-                        <p>Dodaj</p>
-                    </button>
-                </div>
-            </li>
-                    <li class="product">
-                <div class="product-img">
-                    <img src="komp.png" alt="">
-                </div>
-                <div class="product-title">
-                    <h2>Szybszy prąd</h2>
-                </div>
-                <div class="product-price">
-                    <p>$23784.99</p>
-                </div>
-                <div class="product-add">
-                    <button id="button">
-                        <p>Dodaj</p>
-                    </button>
-                </div>
-            </li>
-                    <li class="product">
-                <div class="product-img">
-                    <img src="komp.png" alt="">
-                </div>
-                <div class="product-title">
-                    <h2>Windows 13</h2>
-                </div>
-                <div class="product-price">
-                    <p>$298445.99</p>
-                </div>
-                <div class="product-add">
-                    <button id="button">
-                        <p>Dodaj</p>
-                    </button>
-                </div>
-            </li>
-                    <li class="product">
-                <div class="product-img">
-                    <img src="komp.png" alt="">
-                </div>
-                <div class="product-title">
-                    <h2>Booster Dpi w myszce</h2>
-                </div>
-                <div class="product-price">
-                    <p>$284.99</p>
-                </div>
-                <div class="product-add">
-                    <button id="button">
-                        <p>Dodaj</p>
-                    </button>
-                </div>
-            </li>
-                    <li class="product">
-                <div class="product-img">
-                    <img src="komp.png" alt="">
-                </div>
-                <div class="product-title">
-                    <h2>Szybsze klawisze</h2>
-                </div>
-                <div class="product-price">
-                    <p>$8784.99</p>
-                </div>
-                <div class="product-add">
-                    <button id="button">
-                        <p>Dodaj</p>
-                    </button>
-                </div>
-            </li>
+        <ul class="product-list" id="gallery">
+
         </ul>
 
     </section>
@@ -178,6 +50,184 @@
 
         }
         setInterval(ChangeImage, 10000);
+
+        let products = [
+            { name: "Boost ramu", price: 837.99, image: "overclocking-pamieci-ram.webp" },
+            { name: "Booster FPS'ów", price: 7354.99, image: "fps.jfif" },
+            { name: "SKILL", price: 93465.99, image: "skill.jpg" },
+            { name: "Lepszy aim", price: 2984.99, image: "artOr.jpg" },
+            { name: "Szybszy prąd", price: 23784.99, image: "predkosc_pradu_mini (1).webp" },
+            { name: "Windows 13", price: 298445.99, image: "hqdefault (1).jpg" },
+            { name: "Booster Dpi w myszce", price: 284.99, image: "dpi.jpg" },
+            { name: "Szybsze klawisze", price: 8784.99, image: "Nakladki-ENDORFY-Keycap-PBT-Pudding-Onyx-White-front.jpg" }
+        ];
+        let cart = [];
+
+        document.querySelectorAll('#button').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                cart.push(products[index]);
+                console.log(cart);
+            });
+        });
+
+        function pokazProdukt() {
+            const productContainer = document.getElementById('gallery');
+            productContainer.innerHTML = '';
+
+            for (let i = 0; i < products.length; i++) {
+                const product = products[i];
+                const productDiv = document.createElement('li');
+                productDiv.className = 'product';
+                productDiv.innerHTML = `
+                <div class="product-img">
+                    <img src="${product.image}" alt="">
+</div>
+ <div class="product-title">
+                    <h2>${product.name}</h2>
+                </div>
+
+                <div class="product-price">
+                    <p>$${product.price}</p>
+                </div>
+
+                
+               
+
+          `;
+                productContainer.appendChild(productDiv);
+            }
+        }
+        /* 
+        <li class="product">
+                 <div class="product-img">
+                     <img src="komp.png" alt="">
+                 </div>
+                 <div class="product-title">
+                     <h2>Boost ramu</h2>
+                 </div>
+                 <div class="product-price">
+                     <p>$837.99</p>
+                 </div>
+                 <div class="product-add">
+                     <button id="button">
+                         <p>Dodaj</p>
+                     </button>
+                 </div>
+             </li>
+             <li class="product">
+                 <div class="product-img">
+                     <img src="komp.png" alt="">
+                 </div>
+                 <div class="product-title">
+                     <h2>Booster FPS'ów</h2>
+                 </div>
+                 <div class="product-price">
+                     <p>$7354.99</p>
+                 </div>
+                 <div class="product-add">
+                     <button id="button">
+                         <p>Dodaj</p>
+                     </button>
+                 </div>
+             </li>
+             <li class="product">
+                 <div class="product-img">
+                     <img src="komp.png" alt="">
+                 </div>
+                 <div class="product-title">
+                     <h2>SKILL</h2>
+                 </div>
+                 <div class="product-price">
+                     <p>$93465.99</p>
+                 </div>
+                 <div class="product-add">
+                     <button id="button">
+                         <p>Dodaj</p>
+                     </button>
+                 </div>
+             </li>
+             <li class="product">
+                 <div class="product-img">
+                     <img src="komp.png" alt="">
+                 </div>
+                 <div class="product-title">
+                     <h2>Lepszy aim</h2>
+                 </div>
+                 <div class="product-price">
+                     <p>$2984.99</p>
+                 </div>
+                 <div class="product-add">
+                     <button id="button">
+                         <p>Dodaj</p>
+                     </button>
+                 </div>
+             </li>
+                     <li class="product">
+                 <div class="product-img">
+                     <img src="komp.png" alt="">
+                 </div>
+                 <div class="product-title">
+                     <h2>Szybszy prąd</h2>
+                 </div>
+                 <div class="product-price">
+                     <p>$23784.99</p>
+                 </div>
+                 <div class="product-add">
+                     <button id="button">
+                         <p>Dodaj</p>
+                     </button>
+                 </div>
+             </li>
+                     <li class="product">
+                 <div class="product-img">
+                     <img src="komp.png" alt="">
+                 </div>
+                 <div class="product-title">
+                     <h2>Windows 13</h2>
+                 </div>
+                 <div class="product-price">
+                     <p>$298445.99</p>
+                 </div>
+                 <div class="product-add">
+                     <button id="button">
+                         <p>Dodaj</p>
+                     </button>
+                 </div>
+             </li>
+                     <li class="product">
+                 <div class="product-img">
+                     <img src="komp.png" alt="">
+                 </div>
+                 <div class="product-title">
+                     <h2>Booster Dpi w myszce</h2>
+                 </div>
+                 <div class="product-price">
+                     <p>$284.99</p>
+                 </div>
+                 <div class="product-add">
+                     <button id="button">
+                         <p>Dodaj</p>
+                     </button>
+                 </div>
+             </li>
+                     <li class="product">
+                 <div class="product-img">
+                     <img src="komp.png" alt="">
+                 </div>
+                 <div class="product-title">
+                     <h2>Szybsze klawisze</h2>
+                 </div>
+                 <div class="product-price">
+                     <p>$8784.99</p>
+                 </div>
+                 <div class="product-add">
+                     <button id="button">
+                         <p>Dodaj</p>
+                     </button>
+                 </div>
+             </li>
+        */
+        pokazProdukt();
     </script>
 </body>
 
